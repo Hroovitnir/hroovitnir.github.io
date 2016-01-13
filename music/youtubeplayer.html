@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>WMC: YouTube Player</title>
+	<title>Music! Youtube HTML Player</title>
 	<style type="text/css">
 	html, body {
 		height: 100%;
@@ -22,16 +22,16 @@
 <body>
 	<div id="playerdiv"></div>
 
-	<script src="wmc.js"></script>
+	<script src="flashversion.js"></script>
 	<script type="text/javascript">
 		var flashVersion = false;
-		var params = wmcjs.getParams();
+		var params = flashversionjs.getParams();
 
 		var id = params.id || params.vid;
 
 
-		if (window.wmc) {
-			wmc.SetFlashStatus(flashVersion == false ? false : true);
+		if (window.flashversion) {
+			flashversioon.SetFlashStatus(flashVersion == false ? false : true);
 		}
 
 		function playVideo(id, start) {
