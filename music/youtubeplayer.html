@@ -42,7 +42,8 @@
 	<script type="text/javascript">
 		// Use HTML5 Player to play the video
 		var id = youtube_parser(window.location.search.substring(1));
-
+		var duration;
+		
 		var tag = document.createElement('script');
 
 		tag.src = "https://www.youtube.com/iframe_api";
@@ -58,6 +59,7 @@
 				events: {
 					'onReady': function(event) {
 						player.setPlaybackQuality('small');
+						duration = getDuration();
 						//window.alert(player.getDuration());
 						event.target.playVideo();
 					}
@@ -65,7 +67,7 @@
 			});
 		}
 
-		function GetDuration() {
+		function getDuration() {
 			if (player && player.getDuration) {
 				return player.GetDuration()
 			}
