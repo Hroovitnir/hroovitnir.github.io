@@ -57,11 +57,18 @@
 				videoId: id,
 				events: {
 					'onReady': function(event) {
+						player.setPlaybackQuality('small');
 						//window.alert(player.getDuration());
 						event.target.playVideo();
 					}
 				}
 			});
+		}
+
+		function getDuration() {
+			if (player && player.getDuration) {
+				return player.GetDuration()
+			}
 		}
 
 		function playYoutubeVideo() {
