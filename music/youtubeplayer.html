@@ -53,11 +53,6 @@
 
 		var player;
 		function onYouTubeIframeAPIReady() {
-			// If we're not forcing html5, we should use flash for backward
-			// compatibility (namely setting volume)
-			if (flashVersion != false) {
-				return;
-			}
 			player = new YT.Player('playerdiv', {
 				height: '100%',
 				width: '100%',
@@ -65,9 +60,6 @@
 				events: {
 					'onReady': function(event) {
 						event.target.playVideo();
-						if (params.start) {
-							event.target.seekTo(0, true);
-						}
 					}
 				}
 			});
