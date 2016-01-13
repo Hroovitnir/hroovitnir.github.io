@@ -57,6 +57,7 @@
 				videoId: id,
 				events: {
 					'onReady': function(event) {
+						window.alert(player.getDuration());
 						event.target.playVideo();
 					}
 				}
