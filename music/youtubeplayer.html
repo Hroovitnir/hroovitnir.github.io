@@ -58,9 +58,8 @@
 				videoId: id,
 				events: {
 					'onReady': function(event) {
+						// Since we're only focusing on song, set playback quality to small
 						player.setPlaybackQuality('small');
-						//duration = getDuration();
-						duration = player.getDuration();
 						event.target.playVideo();
 					}
 				}
@@ -94,6 +93,12 @@
 		function setVolume(vol) {
 			if (player && player.setVolume) {
 				player.setVolume(vol);
+			}
+		}
+		
+		function seekTo(seconds, allowSeekAhead) {
+			if (player && player.seekTo) {
+				player.seekTo(seconds, allowSeekAhead);
 			}
 		}
 
