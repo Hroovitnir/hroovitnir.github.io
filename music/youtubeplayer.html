@@ -42,7 +42,6 @@
 	<script type="text/javascript">
 		// Use HTML5 Player to play the video
 		var id = getQueryVariable("vid");
-		var duration;
 		
 		var tag = document.createElement('script');
 
@@ -66,7 +65,7 @@
 			});
 		}
 
-		function getDuration() {
+		function getYoutubeDuration() {
 			if (player && player.getDuration) {
 				return player.GetDuration()
 			}
@@ -90,13 +89,13 @@
 			}
 		}
 		
-		function setVolume(vol) {
+		function setYoutubeVolume(vol) {
 			if (player && player.setVolume) {
 				player.setVolume(vol);
 			}
 		}
 		
-		function seekTo(seconds, allowSeekAhead) {
+		function setYoutubeSeekTo(seconds, allowSeekAhead) {
 			if (player && player.seekTo) {
 				player.seekTo(seconds, allowSeekAhead);
 			}
