@@ -41,7 +41,7 @@
 	<div id="playerdiv"></div>
 	<script type="text/javascript">
 		// Use HTML5 Player to play the video
-		var id = youtube_parser(window.location.search.substring(1));
+		var id = getQueryVariable("vid");
 		var duration;
 		
 		var tag = document.createElement('script');
@@ -100,10 +100,6 @@
 			if (player && player.seekTo) {
 				player.seekTo(seconds, allowSeekAhead);
 			}
-		}
-
-		if (id) {
-			playVideo(id, params.start);
 		}
 	</script>
 </body>
