@@ -98,7 +98,12 @@
 		
 		function setYoutubeSeekTo(seconds, allowSeekAhead) {
 			if (player && player.seekTo) {
-				player.seekTo(seconds, allowSeekAhead);
+				if (player.getPlayerState() <= 0 ) {
+					player.seekTo(seconds, false);
+				}
+				else {
+					player.seekTo(seconds, allowSeekAhead);
+				}
 			}
 		}
 	</script>
