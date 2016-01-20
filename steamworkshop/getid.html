@@ -57,7 +57,7 @@
 			var regExp = /steamcommunity.com\/sharedfiles\/filedetails\/\?id=([0-9]+)/;
 			var strIds = ""
 			for(i=0; i < arrLinks.length; i++ ) {
-				strIds.concat(arrLinks[i].match(regExp)[1],"n");
+				strIds = arrLinks[i].match(regExp)[1].concat("\n");
 			}
 			alert(strIds);
 		}
