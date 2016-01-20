@@ -12,15 +12,21 @@
 		background-color: black;
 		height: calc(100% - 5px);
 	}
-	div.container {
-		width: 100%;
-		height: 100%;
+	div.containertop {
+		width: 80%;
+		height: 30%;
+		display: flex;
+		justify-content: center;
+	}
+	div.containerbottom {
+		width: 80%;
+		height: 30%;
 		display: flex;
 		justify-content: center;
 	}
 	textarea {
-		width: 80%;
-		height: 30%;
+		width: 100%;
+		height: 100%;
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -39,10 +45,12 @@
 	</script>
 </head>
 <body>
-	<div class=container>
+	<div class=containertop>
 		<textarea></textarea>
-		<br/>
-		<textarea></textarea> 
+	</div>
+	<br/>
+	<div class=containerbottom>
+		<textarea></textarea>
 	</div>
 </body>
 </html>
