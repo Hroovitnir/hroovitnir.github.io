@@ -58,7 +58,7 @@
 			for(i=0; i < arrLinks.length; i++ ) {
 				strIds = strIds.concat("resource.AddWorkshop( \"",arrLinks[i].match(regExp)[1], "\" )\n");
 			}
-			alert(strIds);
+			document.getElementById("textbottom").value = strIds;
 		}
 	</script>
 </head>
