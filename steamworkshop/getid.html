@@ -58,7 +58,7 @@
 			var strIds = ""
 			for(i=0; i < arrLinks.length; i++ ) {
 				alert(arrLinks[i].match(regExp)[1]);
-				strIds.concat(arrLinks[i].match(regExp)[1],"\n");
+				strIds.concat(arrLinks[i].match(regExp)[1],"\\n");
 			}
 			alert(strIds);
 		}
