@@ -51,8 +51,10 @@
        			return(false);
 		}
 		function convertLinksToAddWorkShop() {
+			alert("test");
 			var strLinks = document.getElementById("texttop").value;
 			var arrLinks = strLinks.split("\n");
+			alert(arrLinks[0]);
 			var regExp = /steamcommunity.com\/sharedfiles\/filedetails\/?id=(+d)/;
 			alert(arrLinks[0]);
 			var id = arrLinks[0].match(regExp);
